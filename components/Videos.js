@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, Button } from 'react-native';
 
-const Home = ({ navigation, route }) => {
+const Videos = ({ navigation, route }) => {
     // route ?  { name } = route.params : null;
     
     // console.log(name);
@@ -13,4 +13,4 @@ const Home = ({ navigation, route }) => {
     )
 }
 
-export default Home;
+export default Videos;
