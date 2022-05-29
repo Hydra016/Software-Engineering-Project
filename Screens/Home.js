@@ -29,12 +29,13 @@ const styles = StyleSheet.create({
     marginTop: 30
   },
   carousel: {
-    height: '60%',
+    height: '50%',
     borderWidth: 1,
     borderColor: 'black'
   },
   list: {
-    
+    height: '50%',
+    padding: 20
   }
 });
 
