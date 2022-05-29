@@ -6,9 +6,14 @@ const PhonesContext = createContext();
 
 export function PhonesProvider({children}) {
     const [data, setData] = useState([]);
-    useEffect(async () => {
-        const response = axios.get("https://eight-lions-argue-78-154-143-198.loca.lt/data");
-        setData(response.data);
+
+    const fetchData = async (url) => {
+        const res = await axios.get(url);
+        setData(res.data);
+    }
+
+    useEffect(() => {
+        fetchData('https://public-eyes-doubt-78-154-143-198.loca.lt/data');
     },[])
 
     return (

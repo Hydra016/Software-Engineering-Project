@@ -1,11 +1,11 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { View, Text } from "react-native";
-import ItemScreen from "../components/Item";
-import HomeScreen from "../components/Home";
-import CartScreen from "../components/Cart";
-import ProfileScreen from "../components/Profile";
-import TrackScreen from "../components/Track";
+import ItemScreen from "../Screens/Item";
+import HomeScreen from "../Screens/Home";
+import CartScreen from "../Screens/Cart";
+import ProfileScreen from "../Screens/Profile";
+import TrackScreen from "../Screens/Track";
 
 const Stack = createStackNavigator();
 

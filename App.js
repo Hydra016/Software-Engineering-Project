@@ -2,6 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
+import { PhonesProvider } from "./context/PhonesContext";
 
 import {
   ItemScreenNavigation,
@@ -105,4 +106,6 @@ const styles = StyleSheet.create({
   }
 });
 
-export default App;
+export default () => {
+  return <PhonesProvider><App /></PhonesProvider>
+} 
