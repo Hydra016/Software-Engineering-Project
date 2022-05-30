@@ -9,12 +9,16 @@ import {
   TouchableOpacity,
   Image
 } from "react-native";
+import { Container } from "../Components/Container";
 
-const ItemScreen = () => {
+const ItemScreen = ({route}) => {
+const id = route.params.id;
+console.log(id)
+
   return (
-    <View>
-      <Text>Item</Text>
-    </View>
+    <Container>
+      <Text>Id : {id}</Text>
+    </Container>
   )
 }
 export default ItemScreen;
