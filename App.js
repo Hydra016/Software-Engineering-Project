@@ -27,7 +27,7 @@ const App = () => {
               left: 20,
               right: 20,
               elevation: 0,
-              backgroundColor: "#8fcbbc",
+              backgroundColor: "#ffffff",
               borderRadius: 15,
               height: 70,
               ...styles.shadow

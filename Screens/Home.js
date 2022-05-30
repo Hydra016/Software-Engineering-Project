@@ -30,8 +30,6 @@ const styles = StyleSheet.create({
   },
   carousel: {
     height: '50%',
-    borderWidth: 1,
-    borderColor: 'black'
   },
   list: {
     height: '50%',

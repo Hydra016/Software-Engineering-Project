@@ -13,7 +13,7 @@ export function PhonesProvider({children}) {
     }
 
     useEffect(() => {
-        fetchData('https://public-eyes-doubt-78-154-143-198.loca.lt/data');
+        fetchData('https://khaki-cups-boil-78-154-143-198.loca.lt/data');
     },[])
 
     return (
