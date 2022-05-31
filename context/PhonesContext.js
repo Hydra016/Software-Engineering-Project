@@ -13,7 +13,7 @@ export function PhonesProvider({children}) {
     }
 
     useEffect(() => {
-        fetchData('https://spicy-impalas-raise-78-154-143-198.loca.lt/data');
+        fetchData('https://orange-cars-rest-78-154-143-198.loca.lt/data');
     },[])
 
     return (

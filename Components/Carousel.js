@@ -10,7 +10,7 @@ let flatList;
         const numberOfData = dataList.length
         let scrollValue = 0, scrolled = 0
     
-       
+        setInterval(function () {
             scrolled++
             if (scrolled < numberOfData)
                 scrollValue = scrollValue + width
@@ -26,13 +26,11 @@ let flatList;
                 });
             }
     
-        
+        }, 6000)
     }
 
-const Carousel = () => {
+const Carousel = ({ data }) => {
     const mySlide = useRef();
-    const { data } = useContext(PhonesContext);
-    console.log(data)
     const scrollX = new Animated.Value(0);
     let position = Animated.divide(scrollX, width)
     const [ dataList, setDataList ] = useState(data)
