@@ -3,36 +3,31 @@ import { View, Text, StyleSheet, Button } from "react-native";
 import Carousel from "../Components/Carousel";
 import List from "../Components/List";
 import { Container } from "../Components/Container";
+import PhonesContext from "../context/PhonesContext";
 
 const HomeScreen = ({ navigation }) => {
+  const { data } = useContext(PhonesContext);
 
   return (
-    <View style={styles.container}>
-      <Container>
-        <View style={styles.carousel}>
-        <Carousel />
-        </View>
-        <View style={styles.list}>
+    <Container>
+      <View style={styles.carousel}>
+        <Carousel data={data} />
+      </View>
+      <View style={styles.list}>
         <List />
-        </View>
-      </Container>
-    </View>
-  )
-}
+      </View>
+    </Container>
+  );
+};
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#8fcbbc',
-    width: '100%',
-    height: '100%',
-  },
   carousel: {
-    height: '50%',
+    height: "50%",
   },
   list: {
-    height: '50%',
-    padding: 20
-  }
+    height: "50%",
+    padding: 20,
+  },
 });
 
 export default HomeScreen;

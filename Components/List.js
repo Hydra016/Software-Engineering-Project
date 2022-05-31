@@ -16,7 +16,9 @@ const List = () => {
   const navigation = useNavigation();
 
   return (
-    <ScrollView>
+    <ScrollView
+    showsVerticalScrollIndicator={false}
+    >
       <Text style={styles.headingText}>Hotest Deals</Text>
       <FlatList
         keyExtractor={(item) => item.id}
@@ -57,6 +59,7 @@ const styles = StyleSheet.create({
   img: {
     width: 70,
     height: 70,
+    resizeMode: "contain"
   },
   extra: {
     height: 65,
