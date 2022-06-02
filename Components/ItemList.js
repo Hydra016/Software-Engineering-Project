@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   View,
   Text,
@@ -12,10 +12,15 @@ import {
   Dimensions,
 } from "react-native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { Context } from "../context/CartContext";
+import { useNavigation } from "@react-navigation/native";
 
 const { height, width } = Dimensions.get("window");
 
 const ItemList = ({ item }) => {
+  const { postCartItem } = useContext(Context);
+  const navigation = useNavigation();
+
   const {
     title,
     releaseDate,
@@ -87,28 +92,27 @@ const ItemList = ({ item }) => {
       value: size,
     },
     {
-        id: 10,
-     
-    }
+      id: 10,
+    },
   ];
 
   const renderPlatform = (platform) => {
-      if(platform === "Android") {
-          return(
-              <View style={styles.detailesContainer}>
-                  <Ionicons style={styles.icon} name="logo-android" />
-                  <Text>{platform}</Text>
-              </View>
-          )
-      } else {
-          return (
-            <View style={styles.detailesContainer}>
-            <Ionicons style={styles.icon} name="logo-apple" />
-            <Text>{platform}</Text>
+    if (platform === "Android") {
+      return (
+        <View style={styles.detailesContainer}>
+          <Ionicons style={styles.icon} name="logo-android" />
+          <Text>{platform}</Text>
         </View>
-          )
-      }
-  }
+      );
+    } else {
+      return (
+        <View style={styles.detailesContainer}>
+          <Ionicons style={styles.icon} name="logo-apple" />
+          <Text>{platform}</Text>
+        </View>
+      );
+    }
+  };
 
   return (
     <View>
@@ -117,8 +121,8 @@ const ItemList = ({ item }) => {
         showsVerticalScrollIndicator={false}
         style={styles.container}
       >
-          <Text style={styles.heading}>{title}</Text>
-          {renderPlatform(platform)}
+        <Text style={styles.heading}>{title}</Text>
+        {renderPlatform(platform)}
         <FlatList
           data={items}
           keyExtractor={(item) => item.id}
@@ -132,14 +136,20 @@ const ItemList = ({ item }) => {
           }}
         />
         <View style={styles.priceContainer}>
-        <Ionicons style={styles.icon} name="cash" />
-        <Text style={styles.price}>{price}</Text>
+          <Ionicons style={styles.icon} name="cash" />
+          <Text style={styles.price}>{price}</Text>
         </View>
-        <TouchableOpacity style={styles.buttonContainer}>
-            <View style={styles.button}>
+        <TouchableOpacity
+          style={styles.buttonContainer}
+          onPress={() => {
+            postCartItem(item);
+            navigation.navigate("CartScreen");
+          }}
+        >
+          <View style={styles.button}>
             <Text>Add To Cart</Text>
-            <MaterialIcons style={styles.icon} name='chevron-right' />
-            </View>
+            <MaterialIcons style={styles.icon} name="chevron-right" />
+          </View>
         </TouchableOpacity>
         <View style={styles.extra}></View>
       </ScrollView>
@@ -148,9 +158,9 @@ const ItemList = ({ item }) => {
 };
 
 const styles = StyleSheet.create({
-heading: {
+  heading: {
     fontSize: 22,
-}, 
+  },
   icon: {
     fontSize: 25,
     marginRight: 10,
@@ -163,37 +173,37 @@ heading: {
     padding: 20,
   },
   detailesContainer: {
-    display: 'flex',
+    display: "flex",
     flexDirection: "row",
-    alignItems: 'center',
-    height: 40
+    alignItems: "center",
+    height: 40,
   },
   extra: {
-      height: 50
+    height: 50,
   },
   button: {
-    display: 'flex',
+    display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: 'center',
-      backgroundColor: '#ffffff',
-      padding: 10,
-      width: 200,
-      borderRadius: 15,
-      elevation: 2
+    alignItems: "center",
+    backgroundColor: "#ffffff",
+    padding: 10,
+    width: 200,
+    borderRadius: 15,
+    elevation: 2,
   },
   buttonContainer: {
     //   display: 'flex',
     //   flexDirection: "row",
     //   justifyContent: "center"
-    marginTop: 25
+    marginTop: 25,
   },
   priceContainer: {
-     display: 'flex',
-     flexDirection: "row",
-     marginTop: -20,
-     marginLeft: 5
-  }
+    display: "flex",
+    flexDirection: "row",
+    marginTop: -20,
+    marginLeft: 5,
+  },
 });
 
 export default ItemList;
