@@ -1,26 +1,26 @@
-import { createContext, useState, useEffect } from "react";
+import createDataContext from "./CreateDataContext";
 import axios from "axios";
-import React from "react";
+import { PhoneUrl } from "./URLs";
 
-const PhonesContext = createContext();
-
-export function PhonesProvider({children}) {
-    const [data, setData] = useState([]);
-
-    const fetchData = async (url) => {
-        const res = await axios.get(url);
-        setData(res.data);
+const PhonesReducer = (state, action) => {
+    switch(action.type) {
+        case 'get_Phones':
+            return action.payload
+        default:
+            return state
     }
-
-    useEffect(() => {
-        fetchData('https://orange-cars-rest-78-154-143-198.loca.lt/data');
-    },[])
-
-    return (
-        <PhonesContext.Provider value={{data: data}}>
-            {children}
-        </PhonesContext.Provider>
-    )
 }
 
-export default PhonesContext;
+const getPhones = (dispatch) => {
+    return async () => {
+        try {
+            const response = await axios.get(PhoneUrl) 
+            dispatch({ type: 'get_Phones', payload: response.data })
+        }
+        catch(err) {
+            console.log(err)
+        }
+    }
+}
+
+export const { Context, Provider } = createDataContext(PhonesReducer, { getPhones }, [])

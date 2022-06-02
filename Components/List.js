@@ -8,21 +8,26 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import PhonesContext from "../context/PhonesContext";
+import { Context } from "../context/PhonesContext";
 import { useNavigation } from "@react-navigation/native";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 
 const List = () => {
-  const { data } = useContext(PhonesContext);
+  const { state } = useContext(Context);
   const navigation = useNavigation();
 
   return (
     <ScrollView
     showsVerticalScrollIndicator={false}
     >
+      <View style={styles.iconContainer}>
       <Text style={styles.headingText}>Hotest Deals</Text>
+      <Ionicons style={styles.icon} name='flame' />
+      </View>
+      
       <FlatList
         keyExtractor={(item) => item.id}
-        data={data}
+        data={state}
         renderItem={({ item }) => {
           return (
             <TouchableOpacity
@@ -71,6 +76,15 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
     fontSize: 22,
+  },
+  iconContainer: {
+    display: 'flex',
+    flexDirection: "row",
+
+  },
+  icon: {
+    fontSize: 25,
+    marginLeft: 5,
   },
 });
 

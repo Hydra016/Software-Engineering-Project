@@ -2,7 +2,9 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-import { PhonesProvider } from "./context/PhonesContext";
+import { Provider } from "./context/PhonesContext";
+import { Provider as CartProvider } from "./context/CartContext";
+import CartScreen from "./Screens/Cart";
 
 import {
   ItemScreenNavigation,
@@ -49,8 +51,8 @@ const App = () => {
           }}
           />
           <Tab.Screen 
-          name="CartScreenTab" 
-          component={CartScreenNavigation}
+          name="CartScreen" 
+          component={CartScreen}
           options={{
             tabBarIcon: ({focused}) => (
               <View>
@@ -107,5 +109,5 @@ const styles = StyleSheet.create({
 });
 
 export default () => {
-  return <PhonesProvider><App /></PhonesProvider>
+  return <CartProvider><Provider><App /></Provider></CartProvider>
 } 

@@ -12,21 +12,21 @@ import {
   Dimensions,
 } from "react-native";
 import { Container } from "../Components/Container";
-import PhonesContext from "../context/PhonesContext";
+import { Context } from "../context/PhonesContext";
 import ItemList from "../Components/ItemList";
 
 const { width, height } = Dimensions.get("window");
 
 const ItemScreen = ({ route }) => {
-  const { data } = useContext(PhonesContext);
+  const { state } = useContext(Context);
   const id = route.params.id;
-  const item = data.find((item) => item.id === id);
+  const item = state.find((item) => item.id === id);
 
   const { mainImg, img1, img2, img3 } = item;
 
   const ImgArr = [mainImg, img1, img2, img3];
 
-  if (data) {
+  if (state) {
     return (
       <Container>
         <View style={styles.carousel}>

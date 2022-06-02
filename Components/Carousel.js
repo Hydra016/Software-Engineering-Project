@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
 import { View, Text, StyleSheet, Dimensions, FlatList, Animated } from "react-native";
 import CarouselItem from "./CarouselItem";
-import PhonesContext from "../context/PhonesContext";
 
 const { width, height } = Dimensions.get("window");
 let flatList;

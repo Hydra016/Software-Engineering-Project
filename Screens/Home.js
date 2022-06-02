@@ -1,17 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 import Carousel from "../Components/Carousel";
 import List from "../Components/List";
 import { Container } from "../Components/Container";
-import PhonesContext from "../context/PhonesContext";
+import { Context } from "../context/PhonesContext";
 
 const HomeScreen = ({ navigation }) => {
-  const { data } = useContext(PhonesContext);
+  const { state, getPhones } = useContext(Context);
+
+  useEffect(() => {
+    getPhones()
+  },[]);
 
   return (
     <Container>
       <View style={styles.carousel}>
-        <Carousel data={data} />
+        <Carousel data={state} />
       </View>
       <View style={styles.list}>
         <List />
