@@ -6,6 +6,7 @@ import HomeScreen from "../Screens/Home";
 import CartScreen from "../Screens/Cart";
 import ProfileScreen from "../Screens/Profile";
 import TrackScreen from "../Screens/Track";
+import SettingsScreen from "../Screens/Settings";
 
 const Stack = createStackNavigator();
 
@@ -68,6 +69,22 @@ export const TrackScreenNavigation = () => {
             <Stack.Screen 
                 name="TrackScreen"
                 component={TrackScreen}
+            />
+        </Stack.Navigator>
+    )
+}
+
+
+export const SettingsScreenNavigation = () => {
+    return (
+        <Stack.Navigator
+        screenOptions={{
+            headerShown: false,
+        }}
+        >
+            <Stack.Screen 
+                name="SettingsScreen"
+                component={SettingsScreen}
             />
         </Stack.Navigator>
     )

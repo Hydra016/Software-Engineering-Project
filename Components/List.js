@@ -8,45 +8,33 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import { Context } from "../context/PhonesContext";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import Phone from "./Phone";
 
-const List = () => {
-  const { state } = useContext(Context);
+const List = ({ state, heading, name }) => {
   const navigation = useNavigation();
 
   return (
-    <ScrollView
-    showsVerticalScrollIndicator={false}
-    >
+    <View>
       <View style={styles.iconContainer}>
-      <Text style={styles.headingText}>Hotest Deals</Text>
-      <Ionicons style={styles.icon} name='flame' />
+        <Text style={styles.headingText}>{heading}</Text>
+        <Ionicons style={[styles.icon, { color: "#FF6E00" }]} name={name} />
       </View>
-      
-      <FlatList
-        keyExtractor={(item) => item.id}
-        data={state}
-        renderItem={({ item }) => {
-          return (
-            <TouchableOpacity
-              onPress={() => navigation.navigate("ItemScreen", {id: item.id})}
-            >
-              <View style={styles.container}>
-                <Image style={styles.img} source={{ uri: item.mainImg }} />
-                <View style={styles.details}>
-                  <Text>{item.title}</Text>
-                  <Text>{item.memory}</Text>
-                  <Text>{item.storage}</Text>
-                </View>
-              </View>
-            </TouchableOpacity>
-          );
-        }}
-      />
+
+      <View style={{ height: 190, marginTop: 20 }}>
+        <FlatList
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item) => item.id}
+          data={state}
+          renderItem={({ item }) => {
+            return <Phone item={item} />;
+          }}
+        />
+      </View>
       <View style={styles.extra}></View>
-    </ScrollView>
+    </View>
   );
 };
 
@@ -61,11 +49,6 @@ const styles = StyleSheet.create({
     elevation: 2,
     borderRadius: 10,
   },
-  img: {
-    width: 70,
-    height: 70,
-    resizeMode: "contain"
-  },
   extra: {
     height: 65,
   },
@@ -73,14 +56,13 @@ const styles = StyleSheet.create({
     width: 130,
   },
   headingText: {
-    color: "white",
+    color: "#FF6E00",
     fontWeight: "bold",
     fontSize: 22,
   },
   iconContainer: {
-    display: 'flex',
+    display: "flex",
     flexDirection: "row",
-
   },
   icon: {
     fontSize: 25,
