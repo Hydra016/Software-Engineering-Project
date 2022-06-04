@@ -22,9 +22,9 @@ const List = ({ state, heading, name }) => {
         <Text style={styles.headingText}>{heading}</Text>
         <Ionicons style={[styles.icon, { color: "#FF6E00" }]} name={name} />
         </View>
-        <View>
+        <TouchableOpacity>
           <Text style={{ color:'#a9a9a9', fontSize: 12, textDecorationLine: 'underline' }}>View All</Text>
-        </View>
+        </TouchableOpacity>
       </View>
 
       <View style={{ height: 190, marginTop: 20 }}>

@@ -51,6 +51,16 @@ const TopBar = ({ route }) => {
           />
         </View>
       );
+    } else if (name === "Cart") {
+      return (
+        <View style={styles.inputContainer}>
+          <Ionicons style={{ fontSize: 20, marginLeft: 10 }} name="search-outline" />
+          <TextInput 
+          style={styles.inputText}
+          placeholder="Search Cart..."
+          />
+        </View>
+      );
     }
   };
 
