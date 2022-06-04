@@ -18,8 +18,13 @@ const List = ({ state, heading, name }) => {
   return (
     <View>
       <View style={styles.iconContainer}>
+        <View style={{ display: 'flex', flexDirection: 'row' }}>
         <Text style={styles.headingText}>{heading}</Text>
         <Ionicons style={[styles.icon, { color: "#FF6E00" }]} name={name} />
+        </View>
+        <View>
+          <Text style={{ color:'#a9a9a9', fontSize: 12, textDecorationLine: 'underline' }}>View All</Text>
+        </View>
       </View>
 
       <View style={{ height: 190, marginTop: 20 }}>
@@ -63,6 +68,8 @@ const styles = StyleSheet.create({
   iconContainer: {
     display: "flex",
     flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   icon: {
     fontSize: 25,

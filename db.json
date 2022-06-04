@@ -18,7 +18,14 @@
       "img1": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-4.jpg",
       "img2": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-3.jpg",
       "img3": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-2.jpg",
-      "price": "$1,647"
+      "price": "$1,647",
+      "rating": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": 2,
@@ -38,7 +45,14 @@
       "img1": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-pro-max-3.jpg",
       "img2": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-pro-max-4.jpg",
       "img3": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-pro-max-2.jpg",
-      "price": "$1,099"
+      "price": "$1,099",
+      "rating": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": 3,
@@ -58,7 +72,13 @@
       "img1": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-4.jpg",
       "img2": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-2.jpg",
       "img3": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-3.jpg",
-      "price": "$1079"
+      "price": "$1079",
+      "rating": [
+        1,
+        2,
+        3,
+        4
+      ]
     },
     {
       "id": 4,
@@ -78,7 +98,13 @@
       "img1": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-pro-max-3.jpg",
       "img2": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-pro-max-4.jpg",
       "img3": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-pro-max-6.jpg",
-      "price": "$999"
+      "price": "$999",
+      "rating": [
+        1,
+        2,
+        3,
+        4
+      ]
     },
     {
       "id": 5,
@@ -98,7 +124,14 @@
       "img1": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-6-4.jpg",
       "img2": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-6-2.jpg",
       "img3": "https://fdn.gsmarena.com/imgroot/reviews/21/google-pixel-6/lifestyle/-1024w2/gsmarena_013.jpg",
-      "price": "$599"
+      "price": "$599",
+      "rating": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": 6,
@@ -118,7 +151,14 @@
       "img1": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s22-ultra-5g-3.jpg",
       "img2": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s22-ultra-5g-6.jpg",
       "img3": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s22-ultra-5g-5.jpg",
-      "price": "$1,299"
+      "price": "$1,299",
+      "rating": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": 7,
@@ -138,7 +178,12 @@
       "img1": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-4-xl-5.jpg",
       "img2": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-4-2.jpg",
       "img3": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-4-xl-3.jpg",
-      "price": "$399"
+      "price": "$399",
+      "rating": [
+        1,
+        2,
+        3
+      ]
     },
     {
       "id": 8,
@@ -158,7 +203,14 @@
       "img1": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-9-3.jpg",
       "img2": "https://fdn.gsmarena.com/imgroot/reviews/21/oneplus-9/lifestyle/-1024w2/gsmarena_008.jpg",
       "img3": "https://fdn.gsmarena.com/imgroot/reviews/21/oneplus-9/lifestyle/-1024w2/gsmarena_012.jpg",
-      "price": "$729.99"
+      "price": "$729.99",
+      "rating": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": 9,
@@ -178,7 +230,13 @@
       "img1": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-8-pro-2.jpg",
       "img2": "https://fdn.gsmarena.com/imgroot/reviews/20/oneplus-8-pro/lifestyle/-1024w2/gsmarena_003.jpg",
       "img3": "https://fdn.gsmarena.com/imgroot/reviews/20/oneplus-8-pro/lifestyle/-1024w2/gsmarena_004.jpg",
-      "price": "$899"
+      "price": "$899",
+      "rating": [
+        1,
+        2,
+        3,
+        4
+      ]
     },
     {
       "id": 10,
@@ -198,7 +256,11 @@
       "img1": "https://fdn2.gsmarena.com/vv/pics/lg/lg-k71-2.jpg",
       "img2": "https://th.bing.com/th/id/OIP.KseH-9OXrFp2CHpaBMhsswHaEx?pid=ImgDet&rs=1",
       "img3": "https://th.bing.com/th/id/R.55319d7683598641f02ae46b07491df1?rik=OHhd4OxBT6rk3w&pid=ImgRaw&r=0",
-      "price": "$180"
+      "price": "$180",
+      "rating": [
+        1,
+        2
+      ]
     }
   ],
   "Cart": [
@@ -224,6 +286,36 @@
         "price": "$1079"
       },
       "id": 2
+    },
+    {
+      "obj": {
+        "id": 1,
+        "title": "Samsung Galaxy S21 Ultra 5G",
+        "releaseDate": "January 29, 2021",
+        "platform": "Android",
+        "maxUpgrade": "Android 11",
+        "storage": "512GB",
+        "memory": "16GB",
+        "chip": "Exynos 2100",
+        "camera": "108MP/4320p",
+        "resolution": "1440x3200 pixels",
+        "battery": "5000 mAh",
+        "size": "6.8",
+        "maker": "Samsung",
+        "mainImg": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-1.jpg",
+        "img1": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-4.jpg",
+        "img2": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-3.jpg",
+        "img3": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-2.jpg",
+        "price": "$1,647",
+        "rating": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "id": 3
     }
   ],
   "extras": [
@@ -238,8 +330,7 @@
       "title": "Fitbit",
       "memory": "Sense",
       "mainImg": "https://cdn23.bestreviews.com/images/v4desktop/product-matrix/2-eed5bf.jpg?p=w240"
-    }
-    ,
+    },
     {
       "id": 3,
       "title": "Garmin",
@@ -258,7 +349,6 @@
       "memory": "Galaxy Watch 4",
       "mainImg": "https://cdn6.bestreviews.com/images/v4desktop/product-matrix/samsungel-02e0ec.jpg?p=w240"
     }
-    
   ],
   "headphones": [
     {
@@ -272,8 +362,7 @@
       "title": "JBL",
       "memory": "JR460NC Wireless",
       "mainImg": "https://worldwidestereo-weblinc.netdna-ssl.com/product_images/jbl-jr460nc-wireless-over-ear-noise-canceling-kids-headphones/White/6149fad4cff079008700a758/large_thumb.jpg?c=1654118951"
-    }
-    ,
+    },
     {
       "id": 3,
       "title": "Sony",
@@ -292,6 +381,37 @@
       "memory": "EAH-A800 Wireless",
       "mainImg": "https://worldwidestereo-weblinc.netdna-ssl.com/product_images/technics-eah-a800-wireless-noise-cancelling-headphones/Black/621f8490190d3100920031b1/large_thumb.jpg?c=1654102871"
     }
-    
+  ],
+  "TopPicks": [
+    {
+      "id": 1,
+      "mainImg": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-s7-202205?wid=340&hei=264&fmt=p-jpg&qlt=95&.v=1651697659652",
+      "title": "Apple Watch Series 7"
+    },
+    {
+      "id": 2,
+      "mainImg": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-green-202011?wid=445&hei=445&fmt=jpeg&qlt=95&.v=1604022364000",
+      "title": "AirPods Max"
+    },
+    {
+      "id": 3,
+      "mainImg": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-x-new-1.jpg",
+      "title": "iPhone X"
+    },
+    {
+      "id": 4,
+      "mainImg": "https://images.samsung.com/is/image/samsung/assets/uk/2108/pcd/watches/pc/PCD_showcase_3_card_watch4_PC.png?$376_376_PNG$",
+      "title": "Samsung Galaxy Watch 4"
+    },
+    {
+      "id": 5,
+      "mainImg": "https://eu.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw69b2be6d/JBL_E55BT_KEY_RED_6063_FS_x1-1605x1605px.jpg?sw=270&sh=330&sm=fit&sfrm=png",
+      "title": "JBL E55BT"
+    },
+    {
+      "id": 6,
+      "mainImg": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s22-plus-5g-2.jpg",
+      "title": "Samsung Galaxy S22+ 5G"
+    }
   ]
 }

@@ -1,5 +1,12 @@
 import React from "react";
-import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  TextInput,
+} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRoute } from "@react-navigation/native";
 import { useBackHandler } from "@react-native-community/hooks";
@@ -33,6 +40,20 @@ const TopBar = ({ route }) => {
     }
   };
 
+  const renderSearchBar = () => {
+    if (name === "HomeScreen") {
+      return (
+        <View style={styles.inputContainer}>
+          <Ionicons style={{ fontSize: 20, marginLeft: 10 }} name="search-outline" />
+          <TextInput 
+          style={styles.inputText}
+          placeholder="Search Marketplace..."
+          />
+        </View>
+      );
+    }
+  };
+
   return (
     <View
       style={{
@@ -44,11 +65,30 @@ const TopBar = ({ route }) => {
       }}
     >
       {renderBackButton()}
-      <View>
+      {renderSearchBar()}
+      <TouchableOpacity>
         <Ionicons name="notifications-outline" style={{ fontSize: 22 }} />
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  inputText: {
+    borderWidth: 1,
+    margin: 5,
+    borderColor: "#ebecf0",
+    backgroundColor: "#ebecf0",
+    width: 200,
+    borderRadius: 20,
+  },
+  inputContainer: {
+    padding: 2,
+    borderRadius: 20,
+    backgroundColor: "#ebecf0",
+    alignItems: "center",
+    flexDirection: 'row'
+  },
+});
 
 export default TopBar;
