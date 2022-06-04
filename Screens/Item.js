@@ -13,8 +13,11 @@ import {
 } from "react-native";
 import { Container } from "../Components/Container";
 import { Context } from "../context/PhonesContext";
-import ItemList from "../Components/ItemList";
 import TopBar from "../Components/TopBar";
+import ItemView from "../Components/ItemView";
+import Rating from "../Components/Rating";
+import List from "../Components/List";
+import AddToCart from "../Components/AddToCart";
 
 const { width, height } = Dimensions.get("window");
 
@@ -30,6 +33,7 @@ const ItemScreen = ({ route }) => {
   if (state) {
     return (
       <Container>
+        <ScrollView style={styles.container}>
         <TopBar />
         <Text style={{fontSize: 25, fontWeight: 'bold', padding: 10}}>{item.title}</Text>
         <View style={styles.carousel}>
@@ -52,7 +56,18 @@ const ItemScreen = ({ route }) => {
             }}
           />
         </View>
-        <ItemList item={item} />
+        <ItemView item={item} />
+        <Rating rating={item.rating} />
+        <AddToCart item={item} />
+        <View style={{padding: 20}}>
+        <List state={state} heading="Other Similar Products" name='pricetags-outline' />
+        </View>
+        <View
+          style={{ display: "flex", alignItems: "center", marginBottom: 10 }}
+        >
+          <Text style={{ color: "#767676" }}>v.1.0.0</Text>
+        </View>
+        </ScrollView>
       </Container>
     );
   }
@@ -97,6 +112,7 @@ const styles = StyleSheet.create({
   ItemListContainer: {
     height: (width / 2) - 70
   },
+
 });
 
 export default ItemScreen;
