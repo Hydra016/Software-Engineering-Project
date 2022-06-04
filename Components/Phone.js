@@ -14,9 +14,9 @@ const Phone = ({ item }) => {
             source={{uri: item.mainImg}}
           />
         </View>
-        <View style={{ flex: 1, padding: 5 }}>
+        <View style={{ flex: 1, padding: 5, display: 'flex', justifyContent: 'space-between' }}>
           <Text style={{ fontWeight: 'bold', fontFamily: 'Montserrat' }}>{item.title}</Text>
-          <Text>{item.memory}</Text>
+          <Text>{item.memory}/{item.storage}</Text>
         </View>
       </View>
     </TouchableOpacity>
