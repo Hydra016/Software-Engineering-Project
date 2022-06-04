@@ -22,7 +22,7 @@ const CartScreen = () => {
     getCartItems();
   }, []);
 
-  console.log(state)
+  // console.log(state)
 
   if (state !== 0) {
     return (

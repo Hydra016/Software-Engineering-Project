@@ -14,6 +14,7 @@ import {
 import { Container } from "../Components/Container";
 import { Context } from "../context/PhonesContext";
 import ItemList from "../Components/ItemList";
+import TopBar from "../Components/TopBar";
 
 const { width, height } = Dimensions.get("window");
 
@@ -29,6 +30,8 @@ const ItemScreen = ({ route }) => {
   if (state) {
     return (
       <Container>
+        <TopBar />
+        <Text style={{fontSize: 25, fontWeight: 'bold', padding: 10}}>{item.title}</Text>
         <View style={styles.carousel}>
           <FlatList
             data={ImgArr}

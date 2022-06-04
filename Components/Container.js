@@ -14,10 +14,10 @@ export const Container = ({ children }) => {
 const styles = StyleSheet.create({
     smallContainer: {
       marginTop: 30,
-      backgroundColor: '#8fcbbc',
+      backgroundColor: "#FFF",
     },
     container: {
-        backgroundColor: '#8fcbbc',
+        backgroundColor: "#FFF",
         width: '100%',
         height: '100%',
       },

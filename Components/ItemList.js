@@ -121,7 +121,6 @@ const ItemList = ({ item }) => {
         showsVerticalScrollIndicator={false}
         style={styles.container}
       >
-        <Text style={styles.heading}>{title}</Text>
         {renderPlatform(platform)}
         <FlatList
           data={items}
