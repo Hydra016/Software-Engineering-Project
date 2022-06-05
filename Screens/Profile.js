@@ -45,11 +45,11 @@ const ProfileScreen = ({ navigation }) => {
             justifyContent: "space-between",
           }}
         >
-          <TouchableOpacity style={styles.ModalButtons}>
-            <Text>Yes</Text>
+          <TouchableOpacity style={[styles.ModalButtons, { backgroundColor: '#FF6E00' }]}>
+            <Text style={{ color: '#FFF' }}>Yes</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.ModalButtons, { backgroundColor: '#FF6E00' }]} onPress={() => setVisible(false)}>
-            <Text style={{ color: '#FFF' }}>No</Text>
+          <TouchableOpacity style={ styles.ModalButtons } onPress={() => setVisible(false)}>
+            <Text>No</Text>
           </TouchableOpacity>
         </View>
       </Modal>
