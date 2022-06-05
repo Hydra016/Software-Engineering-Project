@@ -16,7 +16,7 @@ const Phone = ({ item }) => {
         </View>
         <View style={{ flex: 1, padding: 5, display: 'flex', justifyContent: 'space-between' }}>
           <Text style={{ fontWeight: 'bold', fontFamily: 'Montserrat' }}>{item.title}</Text>
-          <Text>{item.memory}/{item.storage}</Text>
+          <Text>{item.memory}{item.storage ? `/${item.storage}` : ``}</Text>
         </View>
       </View>
     </TouchableOpacity>
