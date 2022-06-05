@@ -263,7 +263,38 @@
       ]
     }
   ],
-  "Cart": [],
+  "Cart": [
+    {
+      "obj": {
+        "id": 1,
+        "title": "Samsung Galaxy S21 Ultra 5G",
+        "releaseDate": "January 29, 2021",
+        "platform": "Android",
+        "maxUpgrade": "Android 11",
+        "storage": "512GB",
+        "memory": "16GB",
+        "chip": "Exynos 2100",
+        "camera": "108MP/4320p",
+        "resolution": "1440x3200 pixels",
+        "battery": "5000 mAh",
+        "size": "6.8",
+        "maker": "Samsung",
+        "mainImg": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-1.jpg",
+        "img1": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-4.jpg",
+        "img2": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-3.jpg",
+        "img3": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s21-ultra-5g-2.jpg",
+        "price": "$1,647",
+        "rating": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "id": 2
+    }
+  ],
   "extras": [
     {
       "id": 1,
