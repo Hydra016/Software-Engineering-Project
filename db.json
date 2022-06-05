@@ -263,38 +263,7 @@
       ]
     }
   ],
-  "Cart": [
-    {
-      "obj": {
-        "id": 8,
-        "title": "OnePlus 9",
-        "releaseDate": "March 26, 2021",
-        "platform": "Android",
-        "maxUpgrade": "Android 11, up to Android 12, OxygenOS 12",
-        "storage": "128GB",
-        "memory": "8GB",
-        "chip": "Snapdragon 888 5G",
-        "camera": "50MP/4320p",
-        "resolution": "1080x2400 pixels",
-        "battery": "4500 mAh",
-        "size": "6.55",
-        "maker": "OnePlus",
-        "mainImg": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-9-1.jpg",
-        "img1": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-9-3.jpg",
-        "img2": "https://fdn.gsmarena.com/imgroot/reviews/21/oneplus-9/lifestyle/-1024w2/gsmarena_008.jpg",
-        "img3": "https://fdn.gsmarena.com/imgroot/reviews/21/oneplus-9/lifestyle/-1024w2/gsmarena_012.jpg",
-        "price": "$729.99",
-        "rating": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ]
-      },
-      "id": 1
-    }
-  ],
+  "Cart": [],
   "extras": [
     {
       "id": 1,

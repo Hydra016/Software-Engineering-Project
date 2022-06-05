@@ -1,102 +1,153 @@
-import React from "react";
-import { View, Text, StyleSheet, Button, Image, Dimensions, TouchableOpacity } from "react-native";
+import React, { useContext } from "react";
+import { View, Text, StyleSheet, Button, Image, Dimensions, TouchableOpacity, ScrollView } from "react-native";
 import { Container } from "../Components/Container";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { Context } from "../context/PhonesContext";
+import Footer from "../Components/Footer";
+import ProfileDetails from "../Components/ProfileDetails";
+import List from "../Components/List";
+import TopBar from "../Components/TopBar";
 
 const { height, width } = Dimensions.get("window");
 
 const ProfileScreen = ({ navigation }) => {
+  const { state } = useContext(Context);
+
   return (
     <Container>
-        <View style={styles.container}>
-          <View>
-          <View style={styles.imgContainer}>
-          <Image style={styles.img} source={require("../assets/user-1.jpg")} />
-          </View>
-          <View style={{marginTop: 50}}>
-          <View style={styles.textContainer}>
-          <Ionicons style={styles.icon} name='person-outline' />
-          <Text style={styles.text}>Kurtis Weissnat</Text>
-          </View>  
-          <View style={styles.textContainer}>
-          <Ionicons style={styles.icon} name='location-outline' />
-          <Text style={styles.text}>Riga, Latvia</Text>
-          </View>       
-          <View style={styles.textContainer}>
-          <Ionicons style={styles.icon} name='mail-outline' />
-          <Text style={styles.text}>Kurtis.Weissnat@gmail.com</Text>
-          </View> 
-          <View style={styles.textContainer}>
-          <Ionicons style={styles.icon} name='phone-portrait' />
-          <Text style={styles.text}>+371-12345678</Text>
-          </View> 
-          </View>
-          </View>
-          <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.button}>
-            <Text style={{color:'#000'}}>Settings</Text>
-            <MaterialIcons style={styles.buttonIcon} name='settings' />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-            <Text style={{color:'#000'}}>Logout</Text>
-            <MaterialIcons style={styles.buttonIcon} name='logout' />
-            </TouchableOpacity>
+      <TopBar />
+      <ScrollView>
+        <View style={styles.backContainer}>
+          <View style={styles.imageWrapper}>
+          <Image style={[styles.image, styles.shadow]} source={require('../assets/user-1.jpg')} />
           </View>
         </View>
+        <View style={styles.detailesContainer}>
+          <View style={styles.info}>
+            <Text style={styles.text}>Kurtis Weissnat </Text>
+          </View>
+          <View style={styles.info}>
+            <MaterialIcons style={styles.icon} name='location-on' />
+            <Text style={styles.Subtext}>Riga, Latvia </Text>
+          </View>
+        </View>
+        <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 10, marginTop: 50}}>
+        <Text style={ styles.text }>Details</Text>
+        <TouchableOpacity>
+          <Text style={{ color:'#a9a9a9', fontSize: 12, textDecorationLine: 'underline' }}>View All</Text>
+        </TouchableOpacity>
+        </View>
+        
+        <ScrollView 
+        style={{ padding: 10 }}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        >
+        <ProfileDetails
+        image='https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+        title='Previous Orders'
+        icon='shopping-bag'
+        />
+        <ProfileDetails
+        image='https://images.unsplash.com/photo-1594392175511-30eca83d51c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+        title='Returned Items'
+        icon='assignment-return'
+        />
+        <ProfileDetails
+        image='https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+        title='Offers For You'
+        icon='receipt'
+        />
+        <ProfileDetails
+        image='https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+        title='Complaints'
+        icon='thumb-down'
+        />
+        </ScrollView>
+        <View style={{padding: 20, marginTop: 20}}>
+        <List state={state} heading="Start Shopping" name='pricetags-outline' />
+        </View>
+        <View style={styles.signOutContainer}>
+        <TouchableOpacity style={styles.signOut}>
+        <Text>Sign Out</Text>
+        </TouchableOpacity>
+        </View>
+        <Footer />
+        </ScrollView>
     </Container>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    padding: 20,
-    justifyContent: "space-between",
-    height: height - 100
+  backContainer: {
+    backgroundColor: '#FF6E00',
+    height: height / 7,
+    // borderBottomEndRadius: 20,
+    // borderBottomLeftRadius: 20
   },
-  imgContainer: {
-    display: 'flex',
-    alignItems: 'center'
-  }, 
-  img: {
-    width: 150,
-    height: 150,
+  imageWrapper: {
+    backgroundColor: '#fff',
+    padding: 5,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.36,
+    shadowRadius: 6.68,
+    elevation: 11,
+    position: "absolute",
+    top: 30,
+    left: 115,
+    borderRadius: 500
+  },
+  image: {
+    
     borderRadius: 500,
-    elevation: 10
+
+    
   },
-  text: {
-    fontSize: 20,
-    color: '#fff'
+  detailesContainer: {
+    marginTop: 70,
+    padding: 10,
+  },
+  info: {
+    display: 'flex',
+    flexDirection: "row",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   icon: {
-    fontSize: 20,
-    marginRight: 5,
-    color: '#fff'
+    fontSize: 15,
+    marginRight: 1,
+    color: '#AFADA9'
   },
-  textContainer: {
-    display: 'flex', 
-    flexDirection: 'row',
+  text: {
+    fontWeight: "bold",
+    fontSize: 22
+  },
+  Subtext: {
+    fontWeight: "bold",
+    fontSize: 15,
+    color: '#AFADA9'
+  },
+  signOutContainer: {
+    display: 'flex',
+    flexDirection: "row",
+    justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 10
+    marginBottom: 20
   },
-  buttonContainer: {
+  signOut: {
+    borderWidth: 1,
+    borderColor: '#ebecf0',
+    width: 300,
+    height: 50,
+    borderRadius: 20,
     display: 'flex',
-    flexDirection: 'row',
-    padding: 10,
-    justifyContent: "space-between"
-  },
-  button: {
-    width: width / 3,
-    backgroundColor: "#fff",
-    padding: 10,
-    borderRadius: 10,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: "space-between"
-  },
-  buttonIcon: {
-    fontSize: 20,
-    color: '#000'
+    flexDirection: "row",
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 });
 

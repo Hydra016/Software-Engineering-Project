@@ -66,7 +66,7 @@ const App = () => {
           }}
         >
           <Tab.Screen name="Home" component={ItemScreenNavigation} />
-          <Tab.Screen name="Cart" component={CartScreen} />
+          <Tab.Screen name="Cart" component={CartScreenNavigation} />
           <Tab.Screen name="Profile" component={ProfileScreenNavigation} />
 
           <Tab.Screen name="Track" component={TrackScreenNavigation} />

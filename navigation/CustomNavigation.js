@@ -7,6 +7,8 @@ import CartScreen from "../Screens/Cart";
 import ProfileScreen from "../Screens/Profile";
 import TrackScreen from "../Screens/Track";
 import SettingsScreen from "../Screens/Settings";
+import CheckoutScreen from "../Screens/Checkout";
+import NotificationScreen from "../Screens/Notifications"
 
 const Stack = createStackNavigator();
 
@@ -25,6 +27,10 @@ export const ItemScreenNavigation = () => {
                 name="ItemScreen"
                 component={ItemScreen}
             />
+            <Stack.Screen 
+                name="NotificationScreen"
+                component={NotificationScreen}
+            />
         </Stack.Navigator>
     )
 }
@@ -40,7 +46,16 @@ export const CartScreenNavigation = () => {
                 name="CartScreen"
                 component={CartScreen}
             />
+            <Stack.Screen 
+                name="CheckoutScreen"
+                component={CheckoutScreen}
+            />
+            <Stack.Screen 
+                name="NotificationScreen"
+                component={NotificationScreen}
+            />
         </Stack.Navigator>
+        
     )
 }
 
@@ -69,6 +84,10 @@ export const TrackScreenNavigation = () => {
             <Stack.Screen 
                 name="TrackScreen"
                 component={TrackScreen}
+            />
+            <Stack.Screen 
+                name="NotificationScreen"
+                component={NotificationScreen}
             />
         </Stack.Navigator>
     )
