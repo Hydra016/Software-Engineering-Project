@@ -13,7 +13,7 @@ export const Container = ({ children }) => {
 
 const styles = StyleSheet.create({
     smallContainer: {
-      marginTop: 30,
+      marginTop: 21,
       backgroundColor: "#FFF",
     },
     container: {

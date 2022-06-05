@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity,
   TextInput,
+  StatusBar
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRoute } from "@react-navigation/native";
@@ -51,7 +52,7 @@ const TopBar = ({ route }) => {
           />
         </View>
       );
-    } else if (name === "Cart") {
+    } else if (name === "CartScreen") {
       return (
         <View style={styles.inputContainer}>
           <Ionicons style={{ fontSize: 20, marginLeft: 10 }} name="search-outline" />
@@ -64,6 +65,8 @@ const TopBar = ({ route }) => {
     }
   };
 
+  StatusBar.setBackgroundColor('#FF6E00')
+
   return (
     <View
       style={{
@@ -72,11 +75,14 @@ const TopBar = ({ route }) => {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
+        backgroundColor: '#FF6E00',
+        // borderBottomEndRadius: 20,
+        // borderBottomLeftRadius: 20
       }}
     >
       {renderBackButton()}
       {renderSearchBar()}
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('NotificationScreen')}>
         <Ionicons name="notifications-outline" style={{ fontSize: 22 }} />
       </TouchableOpacity>
     </View>

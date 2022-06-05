@@ -19,10 +19,12 @@ import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import TopBar from "../Components/TopBar";
 import CartItem from "../Components/CartItem";
 import List from "../Components/List";
+import { useNavigation } from "@react-navigation/native";
 
 const { width, height } = Dimensions.get("window");
 
 const CartScreen = () => {
+  const navigation = useNavigation();
   const { state, getCartItems, deleteCartItem } = useContext(Context);
   const { state: phones, getPhones } = useContext(Phones);
   const { state: extra, getExtras } = useContext(Extras);
@@ -70,8 +72,7 @@ const CartScreen = () => {
               <TouchableOpacity
                 style={styles.Checkout}
                 onPress={() => {
-                  navigation.navigate("Cart");
-                  postCartItem(item);
+                  navigation.navigate("CheckoutScreen");
                 }}
               >
                 <Text style={{ color: "#fff", fontSize: 22 }}>Chekout</Text>
