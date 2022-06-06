@@ -45,15 +45,19 @@ const ProfileScreen = ({ navigation }) => {
             justifyContent: "space-between",
           }}
         >
-          <TouchableOpacity style={[styles.ModalButtons, { backgroundColor: '#FF6E00' }]}>
-            <Text style={{ color: '#FFF' }}>Yes</Text>
+          <TouchableOpacity
+            style={[styles.ModalButtons, { backgroundColor: "#FF6E00" }]}
+          >
+            <Text style={{ color: "#FFF" }}>Yes</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={ styles.ModalButtons } onPress={() => setVisible(false)}>
+          <TouchableOpacity
+            style={styles.ModalButtons}
+            onPress={() => setVisible(false)}
+          >
             <Text>No</Text>
           </TouchableOpacity>
         </View>
       </Modal>
-      <TopBar />
       <ScrollView>
         <View style={styles.backContainer}>
           <View style={styles.imageWrapperFirst}>
@@ -225,7 +229,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    padding: 10
+    padding: 10,
   },
 });
 

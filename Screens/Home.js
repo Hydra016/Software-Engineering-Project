@@ -8,7 +8,6 @@ import { Context as Extras } from "../context/ExtrasContext";
 import { Context as Headphones } from "../context/HeadphonesContext";
 import Loader from "../Components/Loader";
 import { Ionicons } from "@expo/vector-icons";
-import TopBar from "../Components/TopBar";
 
 const HomeScreen = ({ navigation }) => {
   const { state, getPhones } = useContext(Context);
@@ -29,7 +28,6 @@ const HomeScreen = ({ navigation }) => {
     <Container>
       {/* <Loader /> */}
       <ScrollView>
-        <TopBar />
         <View style={{
             padding: 10,
             display: "flex",
