@@ -16,7 +16,6 @@ import { Context as Extras } from "../context/ExtrasContext";
 import { Context as Headphones } from "../context/HeadphonesContext";
 import { Context as Phones } from "../context/PhonesContext";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
-import TopBar from "../Components/TopBar";
 import CartItem from "../Components/CartItem";
 import List from "../Components/List";
 import { useNavigation } from "@react-navigation/native";
@@ -40,7 +39,6 @@ const CartScreen = () => {
     return (
       <Container>
         <ScrollView>
-          <TopBar />
           <View style={{ padding: 10 }}>
             <View
               style={{

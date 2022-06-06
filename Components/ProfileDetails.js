@@ -40,7 +40,8 @@ const styles = StyleSheet.create({
           height: height/ 4.5,
           borderTopRightRadius: 20,
           borderTopLeftRadius: 20,
-          overflow: 'hidden'
+          overflow: 'hidden',
+          resizeMode: 'contain'
       },
       detailesContainer: {
         padding: 10, 

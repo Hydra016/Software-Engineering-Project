@@ -1,10 +1,12 @@
 import React from "react";
+import TopBar from "../Components/TopBar";
 import { View, StyleSheet } from "react-native";
 
 export const Container = ({ children }) => {
     return (
         <View style={styles.container}>
         <View style={styles.smallContainer}>
+        <TopBar />
             {children}
         </View>
         </View>

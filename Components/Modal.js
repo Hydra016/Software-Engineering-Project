@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     },
     modalContainer: {
         width: '80%',
-        height: 100,
+        // height: 100,
         backgroundColor: '#FFF',
         padding: 20,
         elevation: 20,

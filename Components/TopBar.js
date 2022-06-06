@@ -6,7 +6,7 @@ import {
   Image,
   TouchableOpacity,
   TextInput,
-  StatusBar
+  StatusBar,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useRoute } from "@react-navigation/native";
@@ -20,12 +20,13 @@ const TopBar = ({ route }) => {
   const renderBackButton = () => {
     const backActionHandler = () => {};
 
-    if (name === "ItemScreen" || name === "ProfileScreen") {
+    if (
+      name === "ItemScreen" ||
+      name === "ProfileScreen" ||
+      name === "NotificationScreen"
+    ) {
       return (
-        <TouchableOpacity
-          onPress={() => navigation.navigate("HomeScreen")}
-          style={{}}
-        >
+        <TouchableOpacity onPress={() => navigation.goBack()} style={{}}>
           <Ionicons name="chevron-back-outline" style={{ fontSize: 22 }} />
         </TouchableOpacity>
       );
@@ -45,27 +46,30 @@ const TopBar = ({ route }) => {
     if (name === "HomeScreen") {
       return (
         <View style={styles.inputContainer}>
-          <Ionicons style={{ fontSize: 20, marginLeft: 10 }} name="search-outline" />
-          <TextInput 
-          style={styles.inputText}
-          placeholder="Search Marketplace..."
+          <Ionicons
+            style={{ fontSize: 20, marginLeft: 10 }}
+            name="search-outline"
+          />
+          <TextInput
+            style={styles.inputText}
+            placeholder="Search Marketplace..."
           />
         </View>
       );
     } else if (name === "CartScreen") {
       return (
         <View style={styles.inputContainer}>
-          <Ionicons style={{ fontSize: 20, marginLeft: 10 }} name="search-outline" />
-          <TextInput 
-          style={styles.inputText}
-          placeholder="Search Cart..."
+          <Ionicons
+            style={{ fontSize: 20, marginLeft: 10 }}
+            name="search-outline"
           />
+          <TextInput style={styles.inputText} placeholder="Search Cart..." />
         </View>
       );
     }
   };
 
-  StatusBar.setBackgroundColor('#FF6E00')
+  StatusBar.setBackgroundColor("#FF6E00");
 
   return (
     <View
@@ -75,14 +79,16 @@ const TopBar = ({ route }) => {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: '#FF6E00',
+        backgroundColor: "#FF6E00",
         // borderBottomEndRadius: 20,
         // borderBottomLeftRadius: 20
       }}
     >
       {renderBackButton()}
       {renderSearchBar()}
-      <TouchableOpacity onPress={() => navigation.navigate('NotificationScreen')}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("NotificationScreen")}
+      >
         <Ionicons name="notifications-outline" style={{ fontSize: 22 }} />
       </TouchableOpacity>
     </View>
@@ -103,7 +109,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: "#ebecf0",
     alignItems: "center",
-    flexDirection: 'row'
+    flexDirection: "row",
   },
 });
 

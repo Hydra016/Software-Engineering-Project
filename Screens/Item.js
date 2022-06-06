@@ -34,7 +34,6 @@ const ItemScreen = ({ route }) => {
     return (
       <Container>
         <ScrollView style={styles.container}>
-        <TopBar />
         <Text style={{fontSize: 25, fontWeight: 'bold', padding: 10}}>{item.title}</Text>
         <View style={styles.carousel}>
           <FlatList

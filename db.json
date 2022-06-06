@@ -292,6 +292,34 @@
         ]
       },
       "id": 1
+    },
+    {
+      "obj": {
+        "id": 7,
+        "title": "Google Pixel 4",
+        "releaseDate": "October 22, 2019",
+        "platform": "Android",
+        "maxUpgrade": "Android 10, up to Android 12",
+        "storage": "64GB",
+        "memory": "6GB",
+        "chip": "Snapdragon 855",
+        "camera": "16MP/2160p",
+        "resolution": "1080x2280 pixels",
+        "battery": "2800 mAh",
+        "size": "5.7",
+        "maker": "Google",
+        "mainImg": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-4-1.jpg",
+        "img1": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-4-xl-5.jpg",
+        "img2": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-4-2.jpg",
+        "img3": "https://fdn2.gsmarena.com/vv/pics/google/google-pixel-4-xl-3.jpg",
+        "price": "$399",
+        "rating": [
+          1,
+          2,
+          3
+        ]
+      },
+      "id": 2
     }
   ],
   "extras": [
