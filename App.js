@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
@@ -6,7 +6,6 @@ import { Provider } from "./context/PhonesContext";
 import { Provider as CartProvider } from "./context/CartContext";
 import { Provider as ExtrasProvider } from "./context/ExtrasContext";
 import { Provider as HeadphonesProvider } from "./context/HeadphonesContext";
-import CartScreen from "./Screens/Cart";
 
 import {
   ItemScreenNavigation,
@@ -16,10 +15,23 @@ import {
   SettingsScreenNavigation,
 } from "./navigation/CustomNavigation";
 import { StyleSheet, View, Text } from "react-native";
+import Splash from './Screens/Splash';
 
 const Tab = createBottomTabNavigator();
 
 const App = () => {
+  const [ loading, isLoading ] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      isLoading(false)
+    }, 5000)
+  }, [])
+
+  if(loading) {
+    return <Splash />
+  }
+
   return (
     <>
       <NavigationContainer>
@@ -57,7 +69,6 @@ const App = () => {
               );
             },
           })}
-          initialRouteName="Home"
           tabBarOptions={{
             showLabel: true,
             activeTintColor: "#FF6E00",
