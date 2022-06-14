@@ -9,6 +9,7 @@ import TrackScreen from "../Screens/Track";
 import SettingsScreen from "../Screens/Settings";
 import CheckoutScreen from "../Screens/Checkout";
 import NotificationScreen from "../Screens/Notifications"
+import LoginScreen from "../Screens/LoginScreen";
 
 const Stack = createStackNavigator();
 

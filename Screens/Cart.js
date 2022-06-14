@@ -46,7 +46,7 @@ const CartScreen = () => {
                 flexDirection: "row",
                 justifyContent: "space-between",
               }}
-            >
+            > 
               <Text style={styles.headingText}>My Cart</Text>
               <Text style={styles.headingText}>
                 {state.length > 1
