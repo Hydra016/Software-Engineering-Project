@@ -13,7 +13,6 @@ import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import Phone from "./Phone";
 
 const List = ({ state, heading, name }) => {
-  const navigation = useNavigation();
 
   return (
     <View>

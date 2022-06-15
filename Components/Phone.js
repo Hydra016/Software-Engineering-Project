@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const Phone = ({ item }) => {
   const navigation = useNavigation();
-
+  console.log(item)
   return (
     <TouchableOpacity onPress={() => navigation.navigate("ItemScreen", {id: item.id})}>
       <View style={styles.listContainer}>

@@ -47,7 +47,8 @@ const ItemView = ({ item }) => {
     <View style={{ maxWidth: width/2 }}>
         <View style={styles.detailesContainer}>
             <Ionicons style={styles.icon} name="calendar-outline" />
-            <Text>{releaseDate}</Text>
+            {/* release date must me fixed */}
+            {/* <Text>{releaseDate}</Text> */}
         </View>
         <View style={styles.detailesContainer}>
             <Text>{renderPlatform(platform)}</Text>

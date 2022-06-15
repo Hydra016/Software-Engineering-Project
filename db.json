@@ -264,35 +264,6 @@
     }
   ],
   "Cart": [
-    {
-      "obj": {
-        "id": 3,
-        "title": "iPhone 13",
-        "releaseDate": "September 24, 2021",
-        "platform": "iOS",
-        "maxUpgrade": "iOS 15, up to iOS 15.5",
-        "storage": "256GB",
-        "memory": "4GB",
-        "chip": "Apple A15 Bionic",
-        "camera": "12MP/2160p",
-        "resolution": "1170x2532 pixels",
-        "battery": "3240 mAh",
-        "size": "6.1",
-        "maker": "Apple",
-        "mainImg": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-01.jpg",
-        "img1": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-4.jpg",
-        "img2": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-2.jpg",
-        "img3": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-3.jpg",
-        "price": "$1079",
-        "rating": [
-          1,
-          2,
-          3,
-          4
-        ]
-      },
-      "id": 1
-    }
   ],
   "extras": [
     {

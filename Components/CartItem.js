@@ -7,23 +7,23 @@ const CartItem = ({ item, deleteItem }) => {
 
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={{ uri: item.obj.mainImg }} />
+            <Image style={styles.image} source={{ uri: item.mainImg }} />
             <View style={styles.itemContainer}>
                 <View style={styles.itemDetails}>
                 <Ionicons style={styles.icon} name="phone-portrait-outline" />
-                <Text>{item.obj.title}</Text>
+                <Text>{item.title}</Text>
                 </View>
                 <View style={styles.itemDetails}>
                 <Ionicons style={styles.icon} name="folder-outline" />
-                <Text>{item.obj.storage}</Text>
+                <Text>{item.storage}</Text>
                 </View>
                 <View style={styles.itemDetails}>
                 <Ionicons style={styles.icon} name="hardware-chip-outline" />
-                <Text>{item.obj.memory}</Text>
+                <Text>{item.memory}</Text>
                 </View>
                 <View style={styles.itemDetails}>
                 <Ionicons style={styles.icon} name="cog-outline" />
-                <Text>{item.obj.chip}</Text>
+                <Text>{item.chip}</Text>
                 </View>
             </View>
             <TouchableOpacity style={styles.button} onPress={() => deleteItem(item.id)}>
