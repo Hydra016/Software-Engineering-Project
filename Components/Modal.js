@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Modal, Button, Dimensions, Animated, TouchableO
 
 const { height, width } = Dimensions.get("window");
 
-const SignOutModal = ({ title, visible, children, setModalVisible }) => {
+const SignOutModal = ({ title, visible, children, setModalVisible, onPressYes }) => {
     const [ showModal, setShowModal ] = useState(visible);
     const scaleValue = useRef(new Animated.Value(0)).current
 
@@ -57,6 +57,7 @@ const SignOutModal = ({ title, visible, children, setModalVisible }) => {
         >
           <TouchableOpacity
             style={[styles.ModalButtons, { backgroundColor: "#FF6E00" }]}
+            onPress={onPressYes}
           >
             <Text style={{ color: "#FFF" }}>Yes</Text>
           </TouchableOpacity>

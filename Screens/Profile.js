@@ -30,9 +30,7 @@ const ProfileScreen = ({ navigation }) => {
       visible={visible}
       title='Are you sure you want to sign out?'
       setModalVisible={setVisible}
-      >
-        
-      </Modal>
+      />
       <ScrollView>
         <View style={styles.backContainer}>
           <View style={styles.imageWrapperFirst}>
