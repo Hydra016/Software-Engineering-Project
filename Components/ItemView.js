@@ -15,6 +15,7 @@ import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { Context } from "../context/CartContext";
 import { useNavigation } from "@react-navigation/native";
 import fromUnixTime from 'date-fns/fromUnixTime'
+import { getDate } from "date-fns";
 
 const { height, width } = Dimensions.get("window");
 
@@ -23,7 +24,7 @@ const ItemView = ({ item }) => {
   const navigation = useNavigation();
 
   const { releaseDate, platform, maxUpgrade, storage, memory, chip, camera, resolution, battery, size, price } = item;
-  console.log(`----------------------------------------------------------------------------------------------------------------release: ${fromUnixTime(releaseDate.seconds)}`);
+
   const renderPlatform = (platform) => {
     if (platform === "Android") {
       return (
@@ -48,8 +49,7 @@ const ItemView = ({ item }) => {
     <View style={{ maxWidth: width/2 }}>
         <View style={styles.detailesContainer}>
             <Ionicons style={styles.icon} name="calendar-outline" />
-            {/* release date must me fixed */}
-            {/* <Text>{releaseDate}</Text> */}
+            <Text>{String(fromUnixTime(releaseDate.seconds)).slice(0, 10)}</Text>
         </View>
         <View style={styles.detailesContainer}>
             <Text>{renderPlatform(platform)}</Text>
@@ -64,7 +64,7 @@ const ItemView = ({ item }) => {
         </View>
         <View style={styles.detailesContainer}>
         <Ionicons style={styles.icon} name="resize-outline" />
-        <Text>{size}``</Text>
+        <Text>{size} inches</Text>
         </View>
     </View>
     <View style={{ maxWidth: width/2 }}>
@@ -86,13 +86,13 @@ const ItemView = ({ item }) => {
         </View>
         <View style={styles.detailesContainer}>
         <Ionicons style={styles.icon} name="battery-full-outline" />
-        <Text>{battery}</Text>
+        <Text>{battery}mAh</Text>
         </View>
     </View>     
     </View>
 
-    <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 30, marginTop: 50, color: "#FF6E00" }}>Buy now in just <Text style={{ fontSize: 32, fontWeight: 'bold'}}>{item.price} </Text>only!</Text>
+    <View style={{justifyContent: 'center', alignItems: 'center', width: width}}>
+        <Text style={{ fontSize: 30, marginTop: 50, color: "#FF6E00" }}>Buy now in just <Text style={{ fontSize: 32, fontWeight: 'bold'}}>${item.price}</Text>only!</Text>
     </View>
     </View>
   );
