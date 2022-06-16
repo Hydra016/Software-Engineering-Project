@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Text, View, StyleSheet, Modal, Button, Dimensions, Animated } from 'react-native';
+import { Text, View, StyleSheet, Modal, Button, Dimensions, Animated, TouchableOpacity } from 'react-native';
 
 const { height, width } = Dimensions.get("window");
 
-const SignOutModal = ({ visible, children }) => {
+const SignOutModal = ({ title, visible, children, setModalVisible }) => {
     const [ showModal, setShowModal ] = useState(visible);
     const scaleValue = useRef(new Animated.Value(0)).current
 
@@ -37,7 +37,36 @@ const SignOutModal = ({ visible, children }) => {
         >
             <View style={styles.signOut}>
         <Animated.View style={[styles.modalContainer,{ transform: [{ scale: scaleValue }]}]}>
-            {children}
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
+        >
+          <Text style={{ fontSize: 15 }}>
+            {title}
+          </Text>
+        </View>
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+          }}
+        >
+          <TouchableOpacity
+            style={[styles.ModalButtons, { backgroundColor: "#FF6E00" }]}
+          >
+            <Text style={{ color: "#FFF" }}>Yes</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.ModalButtons}
+            onPress={() => setModalVisible(false)}
+          >
+            <Text>No</Text>
+          </TouchableOpacity>
+        </View>
         </Animated.View>
             </View>
         </Modal>
@@ -59,6 +88,17 @@ const styles = StyleSheet.create({
         elevation: 20,
         borderRadius: 20
     },
+    ModalButtons: {
+        borderWidth: 1,
+        borderColor: "#ebecf0",
+        borderRadius: 20,
+        width: "30%",
+        marginTop: 10,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        padding: 10,
+      },
 })
 
 export default SignOutModal;

@@ -21,9 +21,13 @@ const TrackScreen = ({ navigation }) => {
     <Container>
       <ScrollView style={{ padding: 10 }}>
       <Text style={styles.heading}>Track Your Items</Text>
-      <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20, marginBottom: 20}}>
+      <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20, marginBottom: 5}}>
         <Text>Total Items Delivered</Text>
         <Text>0</Text>
+      </View>
+      <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 5, marginBottom: 40}}>
+      <Text>Items In Delivery</Text>
+        <Text>{state.length}</Text>
       </View>
       <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 20}}>Items In Delivery</Text>
       <ScrollView
@@ -33,7 +37,7 @@ const TrackScreen = ({ navigation }) => {
         {
           state.map(el => {
             return (
-              <ProfileDetails title={el.obj.title} image={el.obj.mainImg} icon='smartphone' />
+              <ProfileDetails title={el.title} image={el.mainImg} icon='smartphone' />
             )
           })
         }
