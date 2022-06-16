@@ -14,6 +14,7 @@ import {
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { Context } from "../context/CartContext";
 import { useNavigation } from "@react-navigation/native";
+import fromUnixTime from 'date-fns/fromUnixTime'
 
 const { height, width } = Dimensions.get("window");
 
@@ -22,7 +23,7 @@ const ItemView = ({ item }) => {
   const navigation = useNavigation();
 
   const { releaseDate, platform, maxUpgrade, storage, memory, chip, camera, resolution, battery, size, price } = item;
-
+  console.log(`----------------------------------------------------------------------------------------------------------------release: ${fromUnixTime(releaseDate.seconds)}`);
   const renderPlatform = (platform) => {
     if (platform === "Android") {
       return (

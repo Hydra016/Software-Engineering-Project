@@ -26,37 +26,12 @@ const ProfileScreen = ({ navigation }) => {
 
   return (
     <Container>
-      <Modal visible={visible}>
-        <View
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        >
-          <Text style={{ fontSize: 15 }}>
-            Are you sure you want to sign out?
-          </Text>
-        </View>
-        <View
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-          }}
-        >
-          <TouchableOpacity
-            style={[styles.ModalButtons, { backgroundColor: "#FF6E00" }]}
-          >
-            <Text style={{ color: "#FFF" }}>Yes</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.ModalButtons}
-            onPress={() => setVisible(false)}
-          >
-            <Text>No</Text>
-          </TouchableOpacity>
-        </View>
+      <Modal 
+      visible={visible}
+      title='Are you sure you want to sign out?'
+      setModalVisible={setVisible}
+      >
+        
       </Modal>
       <ScrollView>
         <View style={styles.backContainer}>
@@ -219,17 +194,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-  },
-  ModalButtons: {
-    borderWidth: 1,
-    borderColor: "#ebecf0",
-    borderRadius: 20,
-    width: "30%",
-    marginTop: 10,
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    padding: 10,
   },
 });
 

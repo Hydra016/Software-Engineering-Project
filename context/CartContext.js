@@ -104,9 +104,8 @@ const postCartItem = () => {
 }
 
 const deleteCartItem = (dispatch) => {
-    return async (id) => {
-        await axios.delete(`${CartUrl}/${id}`);
-        dispatch({ type: 'delete_cart_item', payload: id });
+    return (id) => {
+       db.collection('cart').doc(id).delete()
     }
 }
 
